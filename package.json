@@ -1,0 +1,20 @@
+{
+    "name": "tienda-online",
+    "version": "1.0.0",
+    "description": "Proyecto de tienda online utilizando Vue 3 para manejar un inventario de productos.",
+    "main": "index.js",
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+    },
+    "author": "Tu Nombre",
+    "license": "MIT",
+    "dependencies": {
+      "vue": "^3.2.0"
+    },
+    "devDependencies": {
+      "@vue/cli-service": "^5.0.0",
+      "@vue/compiler-sfc": "^3.2.0"
+    }
+  }
