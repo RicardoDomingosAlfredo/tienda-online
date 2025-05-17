@@ -13,7 +13,7 @@ Simula el inventario de una tienda online, donde los cambios en el stock afectan
 - Vue 3 + Composition API
 -  Vite
 - CSS personalizado
-- 🌐 Axios (para conectar con GraphQL)
+- Axios (para conectar con GraphQL)
 
 ###  Backend
 -  Python 3
@@ -37,11 +37,11 @@ Simula el inventario de una tienda online, donde los cambios en el stock afectan
 -  Mutations para:
   - `aumentarStock(id)`
   - `reducirStock(id)`
-- 🧠 La lógica de `disponible` depende del `stock` y se actualiza automáticamente (incluso sin frontend).
+-  La lógica de `disponible` depende del `stock` y se actualiza automáticamente (incluso sin frontend).
 
 ---
 
-## ⚙ Instalación y Ejecución
+## Instalación y Ejecución
 
 ### 📌 Requisitos previos
 - Node.js (v16+)
@@ -50,7 +50,7 @@ Simula el inventario de una tienda online, donde los cambios en el stock afectan
 
 ---
 
-### 🖥️ 1. Backend – Flask + GraphQL
+###  1. Backend – Flask + GraphQL
 
 ```bash
 # Entra a la carpeta del backend
