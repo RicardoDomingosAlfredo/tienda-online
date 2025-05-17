@@ -1,33 +1,32 @@
-🧠 Comprendiendo la Reactividad en Vue al Gestionar Listas de Objetos
+##Inventario de Productos – Vue + Flask + GraphQL##
 
 🎯 Objetivo
 
-Este proyecto tiene como finalidad explorar en profundidad el sistema de reactividad de Vue 3, enfocándonos en cómo manejar listas de objetos y detectar cambios en propiedades anidadas. Para lograrlo, implementaremos un sistema de inventario de productos que actualiza su estado de disponibilidad de forma dinámica y reactiva según el stock.
-🛒 Contexto
-
-Gestionas una tienda online y necesitas una interfaz que refleje en tiempo real qué productos están disponibles en función de su stock. Cada producto tiene:
-nombre (string): Nombre del producto.
-precio (número): Precio en euros.
-stock (número): Cantidad actual en inventario.
-disponible (boolean): Estado de disponibilidad. Es true si el stock es mayor que 0, false en caso contrario.
-🔧 Requisitos Técnicos
-
-Tu implementación en Vue debe cumplir con los siguientes puntos:
-Cuando el stock de un producto llegue a 0, su propiedad disponible debe cambiar automáticamente a false.
-Si el stock aumenta desde 0, disponible debe volver a true.
-La interfaz debe actualizarse en tiempo real mostrando qué productos están disponibles o no.
-Restricción importante: No se permite el uso de computed. Solo puedes utilizar reactive() y watch() para controlar la reactividad.
+El objetivo de este proyecto es comprender cómo funciona la reactividad en Vue 3 al manejar listas de objetos, y cómo integrarla con un backend desarrollado en Flask + GraphQL. La aplicación gestiona un inventario de productos donde se reflejan dinámicamente los cambios de stock y disponibilidad, tanto en frontend como en backend.
 🛠️ Tecnologías Utilizadas
 
-Este proyecto está construido con las siguientes herramientas:
-✅ Vue 3 con la Composition API
-⚡ Vite como bundler y entorno de desarrollo
-💻 JavaScript para la lógica de negocio
-🎨 HTML y CSS para la estructura visual y estilos básicos
-🧩 Conceptos Clave Explorados
+##Frontend##
+-Vue 3 con Composition API
+-Vite como entorno de desarrollo
+-CSS personalizados
 
-Reactividad en objetos y listas con reactive()
-Observación de propiedades específicas usando watch()
-Actualización condicional de propiedades basadas en otras
-Renderizado dinámico de listas con v-for y clases reactivas
+##Backend##
+ -Python 3
+ -Flask
+ -Graphene para la API GraphQL
+ 
+ ##Funcionalidades##
 
+##Frontend (Vue)##
+Muestra una lista de productos con imagen, nombre, precio y stock.
+El botón "Reducir stock" decrementa el valor del stock, y "Aumentar stock" lo incrementa.
+Si el stock llega a 0, disponible cambia automáticamente a false y se desactiva el botón.
+Si el stock sube desde 0, disponible vuelve a true.
+
+##Backend (Flask + GraphQL)##
+Base de datos en memoria (lista de productos con: id, nombre, precio, stock, disponible).
+Query: permite obtener todos los productos.
+Mutations:
+aumentarStock(id)
+reducirStock(id)
+La lógica de disponibilidad (disponible = stock > 0) se actualiza automáticamente en el backend, independientemente del frontend.
