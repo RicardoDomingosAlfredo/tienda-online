@@ -1,40 +1,33 @@
-#  Comprendiendo la Reactividad en Vue al Manejar Listas de Objetos 
+🧠 Comprendiendo la Reactividad en Vue al Gestionar Listas de Objetos
 
-## 🎯 Objetivo
-El propósito de este proyecto es comprender cómo funciona la reactividad en Vue al gestionar listas de objetos y detectar cambios en propiedades anidadas. Para ello, implementaremos un sistema de inventario de productos que refleje dinámicamente su disponibilidad según el stock.
+🎯 Objetivo
 
-## 🛒 Enunciado
-Tienes una tienda online y necesitas manejar un inventario de productos en Vue. Cada producto tiene las siguientes propiedades:
+Este proyecto tiene como finalidad explorar en profundidad el sistema de reactividad de Vue 3, enfocándonos en cómo manejar listas de objetos y detectar cambios en propiedades anidadas. Para lograrlo, implementaremos un sistema de inventario de productos que actualiza su estado de disponibilidad de forma dinámica y reactiva según el stock.
+🛒 Contexto
 
-- **Nombre** (string): Nombre del producto.
-- **Precio** (número): Precio del producto.
-- **Stock** (número): Cantidad disponible en inventario.
-- **Disponible** (booleano): Indica si el producto está disponible (true si stock > 0, false si stock = 0).
+Gestionas una tienda online y necesitas una interfaz que refleje en tiempo real qué productos están disponibles en función de su stock. Cada producto tiene:
+nombre (string): Nombre del producto.
+precio (número): Precio en euros.
+stock (número): Cantidad actual en inventario.
+disponible (boolean): Estado de disponibilidad. Es true si el stock es mayor que 0, false en caso contrario.
+🔧 Requisitos Técnicos
 
-### 🔥 Requisitos
-Debes implementar un sistema en Vue donde:
+Tu implementación en Vue debe cumplir con los siguientes puntos:
+Cuando el stock de un producto llegue a 0, su propiedad disponible debe cambiar automáticamente a false.
+Si el stock aumenta desde 0, disponible debe volver a true.
+La interfaz debe actualizarse en tiempo real mostrando qué productos están disponibles o no.
+Restricción importante: No se permite el uso de computed. Solo puedes utilizar reactive() y watch() para controlar la reactividad.
+🛠️ Tecnologías Utilizadas
 
-1. Cuando el stock de un producto llegue a 0, la propiedad `disponible` debe cambiar automáticamente a `false`.
-2. Si el stock de un producto aumenta desde 0, `disponible` debe cambiar automáticamente a `true`.
-3. La interfaz debe reflejar dinámicamente qué productos están disponibles y cuáles no.
-4. **No** se permite el uso de `computed`. Solo se pueden emplear `reactive()` y `watch()` para gestionar la reactividad.
+Este proyecto está construido con las siguientes herramientas:
+✅ Vue 3 con la Composition API
+⚡ Vite como bundler y entorno de desarrollo
+💻 JavaScript para la lógica de negocio
+🎨 HTML y CSS para la estructura visual y estilos básicos
+🧩 Conceptos Clave Explorados
 
-## 🛠️ Tecnologías Utilizadas
-Este proyecto ha sido desarrollado utilizando las siguientes tecnologías:
-
--  **Vue3** con Composition API
-- **Vite** para el entorno de desarrollo
-- **JavaScript** para la lógica del proyecto
-- **HTML y CSS** para la estructura y estilos básicos
-
-## ❓ Preguntas a Responder
-En el código del proyecto se debe incluir un archivo con respuestas a las siguientes preguntas:
-
-1. **Vue no detecta cambios dentro de objetos reactivos de la forma que esperarías. ¿Cómo podrías observar un cambio en una propiedad anidada?**
-2. **`watch()` permite escuchar cambios en propiedades específicas dentro de `reactive()`. Explica cómo funciona.**
-3. **¿Cómo harías que un `watch()` detecte cambios en `stock` dentro de un array de productos?**
-
----
-💡 Este ejercicio permitirá explorar en profundidad el funcionamiento de la reactividad en Vue y cómo manejar cambios en estructuras de datos anidadas dentro de `reactive()`. ¡Manos a la obra! 🚀
-
+Reactividad en objetos y listas con reactive()
+Observación de propiedades específicas usando watch()
+Actualización condicional de propiedades basadas en otras
+Renderizado dinámico de listas con v-for y clases reactivas
 
